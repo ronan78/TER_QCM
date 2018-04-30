@@ -14,4 +14,9 @@ class Question extends Model
     protected $fillable = [
         'intitule_q', 'niveau', 'multi', 'code', 'id_cat',
     ];
+
+    public function categorie()
+    {
+        return $this->belongsTo('App\Categorie');
+    }
 }

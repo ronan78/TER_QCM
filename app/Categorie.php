@@ -18,5 +18,11 @@ class Categorie extends Model
 
     protected $fillable = [
         'nom',
+        'intitule_c',
     ];
+
+    public function question()
+    {
+        return $this->hasMany('App\Question');
+    }
 }

@@ -41,7 +41,7 @@ class CategorieController extends Controller
         request()->validate([
             'nom' => 'required',
         ]);
-        Categorie::create($request->only(['nom']));
+        Categorie::create($request->all());
         return redirect()->route('categories.index')
                         ->with('message','La catégorie a été créé avec succès.');
     }

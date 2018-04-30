@@ -30,6 +30,13 @@
         </div>
 
     </div>
+    <div class="form-group row">
+        <label for="intitule_c" class="col-sm-2 col-form-label">Intitule de la catégorie</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="intitule_c" value="{{$categorie->intitule_c}}">
+        </div>
+
+    </div>
     <div class="form-group text-center">
         <button type="submit" class="btn btn-primary" style="margin-left:38px">Mettre à jour</button>
         &nbsp
