@@ -11,7 +11,15 @@ class Reponse extends Model
      *
      * @var array
      */
+    protected $primaryKey = 'id_rep';
+    public $timestamps = false;
     protected $fillable = [
         'intitule_rep', 'correct', 'id_q',
     ];
+    
+    public function question()
+    {
+        return $this->belongsTo('App\Question', 'id_q');
+    }
+
 }

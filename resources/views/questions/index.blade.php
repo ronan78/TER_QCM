@@ -29,7 +29,7 @@
         <tr>
             <th>Intitulé</th>
             <th>Niveau</th>
-            <th>Choix Multiple</th>
+            <th>Type de choix</th>
             <th>Code</th>
             <th>Catégorie</th>
             <th width="23%" colspan="3" class="text-center action">Action</th>
@@ -38,11 +38,11 @@
     <tbody>
     @foreach ($questions as $question)
     <tr>
-        <td>{{ $question->intitulé_q}}</td>
+        <td>{{ $question->intitule_q}}</td>
         <td>{{ $question->niveau}}</td>
-        <td>{{ $question->multi}}</td>
+        <td> @if ($question->multi == 0) Unique @else Multiple @endif  </td>
         <td>{{ $question->code}}</td>
-        <td>{{ $question->categorie->nom }}</td>
+        <td>{{ $question->categorie->nom}}</td>
         <td>
             <a class="btn btn-info" href="{{ route('questions.show',$question->id_q) }}">Voir</a>
             </td>
