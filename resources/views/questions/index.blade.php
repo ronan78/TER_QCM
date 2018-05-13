@@ -51,7 +51,7 @@
             </td>
             <td>
             
-            <form onsubmit="return confirm('Etes vous sûr de vouloir supprimer cette Question ?');" action="{{ route('questions.destroy',[$question->id_q]) }}"
+            <form onsubmit="return confirm('Etes vous sûr de vouloir supprimer cette Question et toutes ses réponses ?');" action="{{ route('questions.destroy',[$question->id_q]) }}"
                         method="POST">
                         {{ csrf_field() }}
                         <input type="hidden" name="_method" value="DELETE" />

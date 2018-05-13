@@ -12,6 +12,7 @@ class Reponse extends Model
      * @var array
      */
     protected $primaryKey = 'id_rep';
+    protected $foreignKey = 'id_q';
     public $timestamps = false;
     protected $fillable = [
         'intitule_rep', 'correct', 'id_q',

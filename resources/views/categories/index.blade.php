@@ -45,14 +45,11 @@
             </td>
             <td>
             
-            <form onsubmit="return confirm('Etes vous sûr de vouloir supprimer cette catégorie ?');" action="{{ route('categories.destroy',[$categorie->id_cat]) }}"
-                        method="POST">
-                        {{ csrf_field() }}
-                        <input type="hidden" name="_method" value="DELETE" />
-                        <button class="btn btn-danger" type="submit">
-                            Supprimer
-                        </button>
-                    </form>
+            <form onsubmit="return confirm('Etes vous sûr de vouloir supprimer cette catégorie ?');" action="{{ route('categories.destroy',[$categorie->id_cat]) }}" method="POST">
+                {{ csrf_field() }}
+                <input type="hidden" name="_method" value="DELETE" />
+                <button class="btn btn-danger" type="submit">Supprimer </button>
+            </form>
         </td>
     </tr>
     @endforeach

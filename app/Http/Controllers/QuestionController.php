@@ -87,7 +87,10 @@ class QuestionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $lvls = [1,2,3,4];
+        $categories = Categorie::all('id_cat', 'nom');
+        $question = Question::with('reponse')->with('categorie')->find($id);
+        return view('questions.edit',compact('question', 'id','categories','lvls'));
     }
 
     /**
@@ -99,7 +102,14 @@ class QuestionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        request()->validate([
+            'intitule_q' => 'required',
+            'niveau' => 'required',
+            'id_cat' => 'required',
+        ]);
+        Question::find($id)->update($request->all());
+        return redirect()->route('questions.index')
+                        ->with('message', 'La question a été modifié avec succès');
     }
 
     /**
@@ -110,6 +120,22 @@ class QuestionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Question::find($id)->delete();
+        return redirect()->route('questions.index')
+                        ->with('message', 'La question a été supprimé avec succès');
+    }
+
+    public function editreponses($id)
+    {
+        $reponses = Reponse::where('id_q', $id)->get();
+        $question = Question::where('id_q', $id)->first();
+        return view('questions.editreponses',compact('reponses', 'id', 'question'));
+    }
+
+    public function deletereponses($id)
+    {
+        $reponses = Reponse::where('id_q', $id)->get();
+        $question = Question::where('id_q', $id)->first();
+        return view('questions.deletereponses',compact('reponses', 'id', 'question'));
     }
 }

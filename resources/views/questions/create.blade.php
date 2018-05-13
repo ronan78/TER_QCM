@@ -119,7 +119,13 @@
             console.log("choix unique error");
             $('#errormulti').hide();
             $('#errorunique').show();
-        } else if (multi == 1 && nombretrue.length < 2){
+        }
+        else if (multi == 0 && nombretrue.length == 0){
+            console.log("choix unique error");
+            $('#errormulti').hide();
+            $('#errorunique').show();
+        }  
+        else if (multi == 1 && nombretrue.length < 2){
             console.log("choix multi error");
             $('#errorunique').hide();
             $('#errormulti').show();

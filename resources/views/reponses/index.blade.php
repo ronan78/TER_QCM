@@ -36,7 +36,7 @@
     <tbody>
     @foreach ($reponses as $reponse)
     <tr>
-        <td>{{ $reponse->intitulé_rep}}</td>
+        <td>{{ $reponse->intitule_rep}}</td>
         <td>{{ $reponse->correct}}</td>
         <td>{{ $reponse->question->intitule_q }}</td>
         <td>

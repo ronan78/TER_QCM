@@ -58,7 +58,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Réponses</h2>
+                <h2>Réponses</h2>
             </div>
             
         </div>
@@ -76,6 +76,6 @@
     @endforeach
 
     <div class="text-center">
-                <a class="btn btn-primary" href="{{ route('questions.index') }}"> Retour</a>
-            </div>
+        <a class="btn btn-primary" href="{{ route('questions.index') }}"> Retour</a>
+    </div>
 @endsection
