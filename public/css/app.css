@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@import "https://fonts.googleapis.com/css?family=Marcellus&subset=latin";
 
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
@@ -11,9 +12,10 @@
   width: 100%; height: 22px;
   bottom: 0; left : 82%;
   font-size: 11px;
-  font-family: Helvetica;
+  font-family: Marcellus;
   /* Reste du CSS... */
 }
+
 
 body i {
   font-family:'FontAwesome'!important;
@@ -46,7 +48,7 @@ body i {
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Raleway", sans-serif;
+  --font-family-sans-serif: Marcellus, sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -58,7 +60,8 @@ body i {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: Marcellus;
+  font-size:16px;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -86,7 +89,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -6106,7 +6109,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -6231,7 +6234,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
