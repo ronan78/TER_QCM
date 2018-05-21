@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    <meta name="description" content="Qcm manager for L1 Informatique UVSQ">
+    <meta name="author" content="Rostom BOUREGHIT & Ronan D'Amonville & Antoine Fernandez & Yann Richou">
+    <link rel="icon" href="">
 
     <title>QCM Manager</title>
 
@@ -22,7 +22,6 @@
         <nav class="my-2 my-md-0 mr-md-3">
             <a class="p-2 text-dark" href="{{ url('/categories') }}">Catégories</a>
             <a class="p-2 text-dark" href="{{ url('/questions') }}">Questions</a>
-            <a class="p-2 text-dark" href="{{ url('/reponses') }}">Réponses</a>
         </nav>
     </div>
 

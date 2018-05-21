@@ -29,15 +29,6 @@
                     </div>
                 </div>
             </div>
-            <div class="card border-secondary mb-3" >
-                <div class="card-header">Gestion des Réponses</div>
-                <div class="card-body text-secondary">
-                    <div class="card-body">
-
-                        <a href="{{ url('/reponses ') }}" class="btn btn-lg btn-block btn-primary">Gérer</a>
-                    </div>
-                </div>
-            </div>
         </div>
 
     </div>
