@@ -18,3 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('qcm', 'QcmController');
+
+Route::get('niveau/{niveau}', 'QcmController@niveau');
+Route::get('unique', 'QcmController@unique');
+Route::get('multi', 'QcmController@multi');
