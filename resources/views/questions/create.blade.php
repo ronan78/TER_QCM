@@ -87,7 +87,7 @@
 
       $('#add').click(function(){  
            i++;  
-           $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td style="width:75%"><input type="text" name="reponses[]" placeholder="Entrer une réponse" class="form-control name_list" /></td> <td style="width:15%"> <label class="radio-inline col-form-label"> <input type="radio" name="correct['+i+']" value="1" /> <i class="fas fa-check"></i> </label> <label class="radio-inline col-form-label"> <input type="radio" name="correct['+i+']" value="0" /> <i class="fas fa-times"></i> </label> </td> <td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+           $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td style="width:75%"><input type="text" name="reponses[]" placeholder="Entrer une réponse" class="form-control name_list" required /></td> <td style="width:15%"> <label class="radio-inline col-form-label"> <input required type="radio" name="correct['+i+']" value="1" /> <i class="fas fa-check"></i> </label> <label class="radio-inline col-form-label"> <input type="radio" name="correct['+i+']" value="0" /> <i class="fas fa-times"></i> </label> </td> <td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
       });  
 
 
@@ -169,7 +169,7 @@
                     <tr>  
                         <td style="width:75%"><input type="text" name="reponses[]" placeholder="Entrer une réponse" class="form-control name_list" /></td>  
                         <td style="width:15%">
-                            <label class="radio-inline col-form-label"> <input type="radio" name="correct[0]" value="1" /> <i class="fas fa-check"></i> </label>
+                            <label class="radio-inline col-form-label"> <input required type="radio" name="correct[0]" value="1" /> <i class="fas fa-check"></i> </label>
                             <label class="radio-inline col-form-label"> <input type="radio" name="correct[0]" value="0" /> <i class="fas fa-times"></i> </label> 
                         </td>
                         <td style="width:10%"><button type="button" name="add" id="add" class="btn btn-success">Ajouter un champ  </button></td>  
