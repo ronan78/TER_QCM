@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/stat.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/all.css">
 
 </head>
@@ -40,7 +41,7 @@
     <script src="{{ asset('js/app.js') }}"></script>
 
 <br>
-    <footer class="">© Vegapunk - TER 2018</footer>
+    <footer class="">©  TER 2018</footer>
 </body>
 
 </html>

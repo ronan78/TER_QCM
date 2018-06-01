@@ -24,6 +24,20 @@
 <form id="questionform" method="post" action="{{action('QuestionController@store')}}">
     {{csrf_field()}}
     <div class="form-group row">
+    <label for="id_cat" class="col-sm-2 col-form-label">Catégorie</label>
+        <div class="col-sm-10">
+        <select id="id_cat" name="id_cat" class="form-control" required>
+            @foreach($categories as $categorie)
+                <option value="{{$categorie->id_cat}}">{{$categorie->nom}}</option>
+            @endforeach
+        </select>
+        </div>
+
+    </div>
+   
+    
+
+    <div class="form-group row">
         <label for="intitule_q" class="col-sm-2 col-form-label">Intitulé</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" name="intitule_q" required>
@@ -61,18 +75,7 @@
 
     </div>
 
-    <div class="form-group row">
-    <label for="id_cat" class="col-sm-2 col-form-label">Catégorie</label>
-        <div class="col-sm-10">
-        <select id="id_cat" name="id_cat" class="form-control" required>
-            @foreach($categories as $categorie)
-                <option value="{{$categorie->id_cat}}">{{$categorie->nom}}</option>
-            @endforeach
-        </select>
-        </div>
-
-    </div>
-    <br>
+    
  
     <h3>Réponses</h3>
     <div class="alert alert-warning" id="errorunique" role="alert" style="display:none;" > <a href="#" class="close alert-close" aria-label="close">&times;</a>  <strong>Question à choix unique, Veuillez choisir une seule bonne réponse. </strong></div>
@@ -172,9 +175,10 @@
                             <label class="radio-inline col-form-label"> <input required type="radio" name="correct[0]" value="1" /> <i class="fas fa-check"></i> </label>
                             <label class="radio-inline col-form-label"> <input type="radio" name="correct[0]" value="0" /> <i class="fas fa-times"></i> </label> 
                         </td>
-                        <td style="width:10%"><button type="button" name="add" id="add" class="btn btn-success">Ajouter un champ  </button></td>  
+                        
                     </tr>  
-                </table>    
+                </table>  
+                <button type="button" name="add" id="add" class="btn btn-success pull-right">+ </button></td>    
             </div>
 
  

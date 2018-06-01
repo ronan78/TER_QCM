@@ -8,29 +8,33 @@
     <div class="container">
         <br>
         <br>
-        <div class="card-deck text-center">
-            <div class="card border-secondary mb-3" >
-                <div class="card-header">Gestion des Catégories</div>
-                <div class="card-body text-secondary">
-                    <div class="card-body">
-
-                        <a href="{{ url('/categories ') }}" class="btn btn-lg btn-block btn-primary">Gérer</a>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="card border-secondary mb-3" >
-                <div class="card-header">Gestion des Questions</div>
-                <div class="card-body text-secondary">
-                    <div class="card-body">
-
-                        <a href="{{ url('/questions ') }}" class="btn btn-lg btn-block btn-primary">Gérer</a>
-                    </div>
-                </div>
-            </div>
+        <center>
+        <div class="wrapper">
+      <div class="panel">
+        <div class="panel-header">
+          <h3 class="title">Statistiques</h3>
+ 
+          
         </div>
-
+ 
+        <div class="panel-body">
+          <div class="categories">
+            <div class="category">
+              <span >Catégories</span>
+              <span class="text-primary">{{$categories}}</span>
+            </div>
+            <div class="category">
+              <span>Questions</span>
+              <span class="text-primary">{{$questions}}</span>
+            </div>
+            <div class="category">
+              <span>Réponses</span>
+              <span class="text-primary">{{$reponses}}</span>
+            </div>
+          </div>
+ 
+      </div>
+      </center>
     </div>
 
 

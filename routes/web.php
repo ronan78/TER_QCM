@@ -1,5 +1,7 @@
 <?php
-
+use App\Question;
+use App\Categorie;
+use App\Reponse;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $categories = Categorie::get()->count();
+    $questions = Question::get()->count();
+    $reponses = Reponse::get()->count();
+
+    return view('welcome',compact('questions','categories', 'reponses'));
 });
 
 
