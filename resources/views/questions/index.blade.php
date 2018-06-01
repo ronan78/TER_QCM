@@ -29,7 +29,7 @@
         <tr>
             <th>Intitulé</th>
             <th>Niveau</th>
-            <th>Type de choix</th>
+            <th>Type</th>
             <th>Code</th>
             <th>Catégorie</th>
             <th width="23%" colspan="3" class="text-center action">Action</th>

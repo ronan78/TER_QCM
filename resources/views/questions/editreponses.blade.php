@@ -123,7 +123,6 @@
                                 <label class="radio-inline col-form-label"> <input type="radio" @if($reponse->correct == 1) checked @endif name="correct[{{$index}}]" value="1" /> <i class="fas fa-check"></i> </label>
                                 <label class="radio-inline col-form-label"> <input type="radio" @if($reponse->correct == 0) checked @endif name="correct[{{$index}}]" value="0" /> <i class="fas fa-times"></i> </label> 
                             </td>
-                            <td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td>
                         </tr> 
                     @endforeach 
                 </table>    

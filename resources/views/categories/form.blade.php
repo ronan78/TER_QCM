@@ -2,7 +2,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Nom:</strong>
-            {!! Form::text('nom', null, array('placeholder' => 'Nom de la catégorie','class' => 'form-control')) !!}
+            {!! Form::text('nom', null, array('required' => 'required','placeholder' => 'Nom de la catégorie','class' => 'form-control')) !!}
         </div>
     </div>
 

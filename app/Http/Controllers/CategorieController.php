@@ -39,8 +39,8 @@ class CategorieController extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'nom' => 'required',
-        ]);
+            'nom' => 'required|unique:categories',
+        ])->with('errors','La catégorie existe déjà.');
         Categorie::create($request->all());
         return redirect()->route('categories.index')
                         ->with('message','La catégorie a été enregistré avec succès.');
